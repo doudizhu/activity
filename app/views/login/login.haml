@@ -1,0 +1,45 @@
+%div.login-box
+  %h4
+    %strong
+      用户登录
+
+  %p(style="text-align: right;margin-top:20px")
+    %a
+      =link_to '用户注册',{:controller => 'login',:action => 'regist'}
+
+  =form_for :user , url:'process_login', method:'post' do |f|
+    .input-group.wh100
+      = f.label :'帐号', :class => 'input-group-addon wh20'
+      = f.text_field :name ,:class => 'form-control'
+    .input-group.mt15.wh100
+      = f.label :'密码' , :class => 'input-group-addon wh20'
+      = f.text_field :password, :type=>"password"  , :class => 'form-control'
+
+    %p(style="text-align: right;margin-top:5px")
+      =link_to '忘记密码',{:controller => 'login',:action => 'forgot1'}
+
+    .btn-danger.active
+      = flash.now[:error]
+    %div(style="text-align:center;" )
+      = f.submit "登录", class: "btn btn-default", style:'width:150px'
+
+    -#.input-group
+    -#  %span.input-group-addon
+    -#    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;帐号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    -#  %input.form-control(type='text')
+    -#.input-group(style="margin-top: 15px;")
+    -#  %span.input-group-addon
+    -#    &nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;密码&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    -#  %input.form-control(type='text')
+    -#
+    -#%p(style="text-align: right")
+    -#  %a
+    -#    忘记密码
+    -#%div(style="text-align: center")
+    -#  -#%input(type="submit" style="padding:5px 60px")
+    -#  %button.btn.btn-default(style="padding: 5px 50px;")
+    -#    登录
+
+
+
+

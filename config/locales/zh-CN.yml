@@ -1,0 +1,26 @@
+zh-CN:
+   activerecord:
+        attributes:
+          user:
+            name: "帐号"
+            password: "密码"
+            password_confirmation: ""
+            forgot_pw_question: "忘记密码问题"
+            forgot_pw_answer: "忘记密码答案"
+
+        errors:
+          models:
+            user:
+              attributes:
+                name:
+                  blank: "不能为空"
+                  taken: "已被注册"
+                password:
+                  blank: "不能为空"
+                password_confirmation:
+#                  blank: "确认密码不能为空"
+                  confirmation: "两次密码输入不一致，请重新输入"
+                forgot_pw_question:
+                  blank: "不能为空"
+                forgot_pw_answer:
+                  blank: "不能为空"

@@ -1,0 +1,62 @@
+.login-box
+  %h4
+    %strong
+      新用户注册
+
+  %p(style="text-align: right;margin-top:20px;")
+    =link_to '用户登录',{:controller => 'login',:action => 'login'}
+
+
+  =form_for :user   do |f|
+    .input-group.wh100
+      = f.label :'帐号', :class => 'input-group-addon wh20'
+      = f.text_field :name ,:class => 'form-control'
+    .input-group.mt15.wh100
+      = f.label :'请设置密码', :class => 'input-group-addon wh20'
+      = f.text_field :password, :type=>"password",:class => 'form-control'
+    .input-group.mt15.wh100
+      = f.label :'请确认密码' , :class => 'input-group-addon wh20'
+      = f.text_field :password_confirmation, :type=>"password",:class => 'form-control'
+    .input-group.mt15.wh100
+      = f.label :'忘记密码问题', :class => 'input-group-addon wh20'
+      = f.text_field :forgot_pw_question,:class => 'form-control'
+    .input-group.mt15.wh100
+      = f.label :'忘记密码答案', :class => 'input-group-addon wh20'
+      = f.text_field :forgot_pw_answer,:class => 'form-control'
+
+    .btn-danger.active
+      -if @user.errors.any?
+        = @user.errors.full_messages.first
+
+    .mt15(style="text-align:center;")
+      = f.submit "注  册", class: "btn btn-default", style:'width:150px'
+    -#
+    -#.input-group
+    -#  %span.input-group-addon
+    -#    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;帐号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    -#  %input.form-control(type='text')
+    -#.input-group(style="margin-top: 15px;")
+    -#  %span.input-group-addon
+    -#    &nbsp;&nbsp;请设置密码&nbsp;&nbsp;
+    -#  %input.form-control(type='text')
+    -#.input-group(style="margin-top: 15px;")
+    -#  %span.input-group-addon
+    -#    &nbsp;&nbsp;请确认密码&nbsp;&nbsp;
+    -#  %input.form-control(type='text')
+    -#.input-group(style="margin-top: 15px;")
+    -#  %span.input-group-addon
+    -#    忘记密码问题
+    -#  %input.form-control(type='text')
+    -#.input-group(style="margin-top: 15px;")
+    -#  %span.input-group-addon
+    -#    忘记密码答案
+    -#  %input.form-control(type='text')
+    -#
+    -#%div(style="text-align: center")
+    -#  -#%input(type="submit" style="padding:5px 60px")
+    -#  %button.btn.btn-default(style="padding: 5px 50px;margin-top:15px;" type="submit")
+    -#  =link_to "注册",create_user_path
+
+
+
+

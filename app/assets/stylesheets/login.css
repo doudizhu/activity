@@ -1,0 +1,36 @@
+.login-box{
+    width: 600px;
+    height: auto;
+    margin: 100px auto 0 auto;
+    padding: 20px;
+    background: #EEEEEE;
+    /*border:solid 1px lightgrey;*/
+}
+
+.title1{
+    padding: 20px 60px;
+    position: relative;
+}
+
+.field_with_errors{
+    display: inline;
+}
+
+.mt15{
+    margin-top: 15px;
+}
+.wh20{
+    width: 20%;
+}
+.wh100{
+    width: 100%;
+}
+
+.table-header{
+    background: #EEEEEE;
+}
+
+.breadcrumb1{
+    background: #EEEEEE;
+    padding: 10px 60px;
+}

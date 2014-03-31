@@ -1,0 +1,41 @@
+.title1
+  %span(style="font-size:40px;" )
+    活动通
+  %span(style="position:absolute;right:60px;" )
+    你好,管理员
+    %a
+      =link_to '退出',{:controller => 'login',:action => 'login'}
+
+.breadcrumb1
+  =link_to '首页',{:controller => 'login',:action => 'login'}
+  %span(style="color:grey" )
+    ='/'
+    添加用户
+
+.login-box.mt15
+  =form_for :user   do |f|
+    .input-group.wh100
+      = f.label :'帐号', :class => 'input-group-addon wh20'
+      = f.text_field :name ,:class => 'form-control'
+    .input-group.mt15.wh100
+      = f.label :'请设置密码', :class => 'input-group-addon wh20'
+      = f.text_field :password, :type=>"password",:class => 'form-control'
+    .input-group.mt15.wh100
+      = f.label :'请确认密码' , :class => 'input-group-addon wh20'
+      = f.text_field :password_confirmation, :type=>"password",:class => 'form-control'
+    .input-group.mt15.wh100
+      = f.label :'忘记密码问题', :class => 'input-group-addon wh20'
+      = f.text_field :forgot_pw_question,:class => 'form-control'
+    .input-group.mt15.wh100
+      = f.label :'忘记密码答案', :class => 'input-group-addon wh20'
+      = f.text_field :forgot_pw_answer,:class => 'form-control'
+
+    .btn-danger.active
+      -if @user.errors.any?
+        = @user.errors.full_messages.first
+
+    .mt15(style="text-align:center;")
+      = f.submit "确认添加", class: "btn btn-default", style:'width:150px'
+
+
+
