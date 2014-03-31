@@ -56298,3 +56298,360 @@ Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-03-31 16:15:38 +0800
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-31 16:15:38 +0800
+
+
+Started GET "/forgot2" for 127.0.0.1 at 2014-03-31 16:22:27 +0800
+Processing by LoginController#forgot2 as HTML
+  Rendered login/forgot2.haml within layouts/application (3.0ms)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-31 16:22:27 +0800
+
+
+Started GET "/assets/android.css?body=1" for 127.0.0.1 at 2014-03-31 16:22:27 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-31 16:22:27 +0800
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-03-31 16:22:27 +0800
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-31 16:22:27 +0800
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-03-31 16:22:27 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-31 16:22:27 +0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-31 16:22:27 +0800
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-03-31 16:22:27 +0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-31 16:22:27 +0800
+
+
+Started GET "/forgot1" for 127.0.0.1 at 2014-03-31 16:22:29 +0800
+Processing by LoginController#forgot1 as HTML
+  Rendered login/forgot1.haml within layouts/application (6.7ms)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-31 16:22:29 +0800
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-03-31 16:22:29 +0800
+
+
+Started GET "/assets/android.css?body=1" for 127.0.0.1 at 2014-03-31 16:22:29 +0800
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-31 16:22:29 +0800
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-03-31 16:22:29 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-31 16:22:29 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-31 16:22:29 +0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-31 16:22:29 +0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-31 16:22:29 +0800
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-03-31 16:22:29 +0800
+
+
+Started GET "/forgot1" for 127.0.0.1 at 2014-03-31 16:22:31 +0800
+Processing by LoginController#forgot1 as HTML
+  Rendered login/forgot1.haml within layouts/application (3.4ms)
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-31 16:22:31 +0800
+
+
+Started GET "/assets/android.css?body=1" for 127.0.0.1 at 2014-03-31 16:22:31 +0800
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-31 16:22:31 +0800
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-03-31 16:22:31 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-31 16:22:31 +0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-31 16:22:31 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-31 16:22:31 +0800
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-03-31 16:22:31 +0800
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-03-31 16:22:31 +0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-31 16:22:31 +0800
+
+
+Started POST "/forgot1" for 127.0.0.1 at 2014-03-31 16:22:33 +0800
+
+AbstractController::ActionNotFound (The action 'forgot_pw1' could not be found for LoginController):
+  actionpack (4.0.2) lib/abstract_controller/base.rb:131:in `process'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.2) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.2) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__220691818__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/lhp/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/lhp/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/lhp/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/lhp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (1.0ms)
+
+
+Started POST "/forgot1" for 127.0.0.1 at 2014-03-31 16:22:58 +0800
+Processing by LoginController#forgot_pw1 as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0BK9/kMl2ZAn6FlqMVfmS6F8d98kSeBtpyVVMq7oOsE=", "user"=>{"name"=>""}, "commit"=>"下一步"}
+  Rendered login/forgot1.haml within layouts/application (1.9ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-31 16:22:58 +0800
+
+
+Started GET "/assets/android.css?body=1" for 127.0.0.1 at 2014-03-31 16:22:58 +0800
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-31 16:22:58 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-31 16:22:58 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-31 16:22:58 +0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-31 16:22:58 +0800
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-03-31 16:22:58 +0800
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-03-31 16:22:58 +0800
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-03-31 16:22:58 +0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-31 16:22:58 +0800
+
+
+Started POST "/forgot1" for 127.0.0.1 at 2014-03-31 16:23:01 +0800
+Processing by LoginController#forgot_pw1 as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0BK9/kMl2ZAn6FlqMVfmS6F8d98kSeBtpyVVMq7oOsE=", "user"=>{"name"=>"1"}, "commit"=>"下一步"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."name" = '1' LIMIT 1
+Redirected to http://0.0.0.0:3000/forgot2
+Completed 302 Found in 19ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/forgot2" for 127.0.0.1 at 2014-03-31 16:23:01 +0800
+Processing by LoginController#forgot2 as HTML
+  Rendered login/forgot2.haml within layouts/application (3.8ms)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-31 16:23:02 +0800
+
+
+Started GET "/assets/android.css?body=1" for 127.0.0.1 at 2014-03-31 16:23:02 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-31 16:23:02 +0800
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-03-31 16:23:02 +0800
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-03-31 16:23:02 +0800
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-31 16:23:02 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-31 16:23:02 +0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-31 16:23:02 +0800
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-03-31 16:23:02 +0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-31 16:23:02 +0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-31 16:23:04 +0800
+
+
+Started GET "/assets/android.css?body=1" for 127.0.0.1 at 2014-03-31 16:23:04 +0800
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-03-31 16:23:04 +0800
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-03-31 16:23:04 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-31 16:23:04 +0800
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-31 16:23:04 +0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-31 16:23:04 +0800
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-03-31 16:23:04 +0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-31 16:23:04 +0800
+
+
+Started POST "/forgot1" for 127.0.0.1 at 2014-03-31 16:23:39 +0800
+Processing by LoginController#forgot_pw1 as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0BK9/kMl2ZAn6FlqMVfmS6F8d98kSeBtpyVVMq7oOsE=", "user"=>{"name"=>""}, "commit"=>"下一步"}
+  Rendered login/forgot1.haml within layouts/application (2.1ms)
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-31 16:23:39 +0800
+
+
+Started GET "/assets/android.css?body=1" for 127.0.0.1 at 2014-03-31 16:23:39 +0800
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-03-31 16:23:39 +0800
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-31 16:23:39 +0800
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-03-31 16:23:39 +0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-31 16:23:39 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-31 16:23:39 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-31 16:23:39 +0800
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-03-31 16:23:39 +0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-31 16:23:39 +0800
+
+
+Started POST "/forgot1" for 127.0.0.1 at 2014-03-31 16:24:52 +0800
+Processing by LoginController#forgot_pw1 as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0BK9/kMl2ZAn6FlqMVfmS6F8d98kSeBtpyVVMq7oOsE=", "user"=>{"name"=>"qw"}, "commit"=>"下一步"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."name" = 'qw' LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/forgot2
+Completed 302 Found in 18ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/forgot2" for 127.0.0.1 at 2014-03-31 16:24:53 +0800
+Processing by LoginController#forgot2 as HTML
+  Rendered login/forgot2.haml within layouts/application (5.4ms)
+Completed 200 OK in 48ms (Views: 46.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-31 16:24:53 +0800
+
+
+Started GET "/assets/android.css?body=1" for 127.0.0.1 at 2014-03-31 16:24:53 +0800
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-31 16:24:53 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-31 16:24:53 +0800
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-03-31 16:24:53 +0800
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-03-31 16:24:53 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-31 16:24:53 +0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-31 16:24:53 +0800
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-03-31 16:24:53 +0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-31 16:24:53 +0800

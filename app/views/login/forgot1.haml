@@ -11,7 +11,7 @@
     %a
       =link_to '用户登录',{:controller => 'login',:action => 'login'}
 
-  =form_for :user , url:'forgot2', method:'post' do |f|
+  =form_for :user , url:'forgot1', method:'post' do |f|
     .input-group.wh100
       = f.label :'帐号', :class => 'input-group-addon wh20'
       = f.text_field :name ,:class => 'form-control',:placeholder => '请输入帐号名'

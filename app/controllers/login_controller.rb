@@ -55,14 +55,8 @@ class LoginController < ApplicationController
   end
 
   def forgot1
-
   end
-
-  def forgot2
-
-  end
-
-  def forgot_pw2
+  def forgot_pw1
     if params[:user][:name] == ''
       flash.now[:notice] = '帐号不能为空'
       render :forgot1
@@ -76,6 +70,14 @@ class LoginController < ApplicationController
       end
     end
 
+
+
+    def forgot2
+
+    end
+    def forgot_pw2
+
+    end
     def forgot3
 
     end
