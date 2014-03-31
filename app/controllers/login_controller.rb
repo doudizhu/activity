@@ -40,7 +40,7 @@ class LoginController < ApplicationController
   end
 
   def quit
-    puts  session[:login_user]
+    puts session[:login_user]
     session[:login_user] = ''
     redirect_to :root
   end
@@ -57,12 +57,29 @@ class LoginController < ApplicationController
   def forgot1
 
   end
+
   def forgot2
 
   end
-  def forgot3
+
+  def forgot_pw2
+    if params[:user][:name] == ''
+      flash.now[:notice] = '帐号不能为空'
+      render :forgot1
+    else
+      user = User.find_by_name(params[:user][:name])
+      if user
+        session[:forgot_pw_user_name] = params[:user][:name]
+        redirect_to :forgot2
+      else
+        render :forgot1
+      end
+    end
+
+    def forgot3
+
+    end
+
 
   end
-
-
 end
