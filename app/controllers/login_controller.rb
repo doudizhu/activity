@@ -13,7 +13,6 @@ class LoginController < ApplicationController
 
   def create
     @user = User.new(params[:user])
-
     if @user.save
       session[:login_user] = @user.name
       redirect_to :welcome1
@@ -31,11 +30,27 @@ class LoginController < ApplicationController
         session[:login_user] = @user.name
         redirect_to :welcome1
       else
+        session[:login_user] = 'admin'
         redirect_to :admin
       end
     else
       flash.now[:error] = '用户名不存在或密码错误'
       render :login
+    end
+  end
+
+  def quit
+    puts  session[:login_user]
+    session[:login_user] = ''
+    redirect_to :root
+  end
+
+  def home_page
+    if session[:login_user] == 'admin'
+
+      redirect_to :admin
+    else
+      redirect_to :root
     end
   end
 

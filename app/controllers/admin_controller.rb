@@ -2,7 +2,7 @@ class AdminController < ApplicationController
   require 'will_paginate/array'
   def manager_index
     #@user = User.all
-    session[:success]=''
+    #session[:success]=''
     #@user = User.where(:login_type => 'user')
     #p '------------------------------------'
 

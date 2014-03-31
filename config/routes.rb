@@ -18,6 +18,9 @@ Activity::Application.routes.draw do
   get "forgot2" => "login#forgot2"
   get "forgot3" => "login#forgot3"
 
+  get "quit" =>"login#quit"
+  get "home_page" =>"login#home_page"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
