@@ -17,6 +17,8 @@ Activity::Application.routes.draw do
   get "forgot1" => "login#forgot1"
   get "forgot2" => "login#forgot2"
   post "forgot1" => "login#forgot_pw1"
+  post "forgot2" => "login#forgot_pw2"
+
   get "forgot3" => "login#forgot3"
 
   get "quit" =>"login#quit"

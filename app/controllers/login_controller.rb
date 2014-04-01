@@ -73,11 +73,19 @@ class LoginController < ApplicationController
 
 
     def forgot2
+      @forgot_pw_question = User.find_by_name(session[:forgot_pw_user_name])[:forgot_pw_question]
 
     end
     def forgot_pw2
-
+      @forgot_pw_question = User.find_by_name(session[:forgot_pw_user_name])[:forgot_pw_question]
+      if @forgot_pw_question  == params[:user][:forgot_pw_answer]
+        redirect_to :forgot3
+      else
+        flash.now[:notice]='忘记密码答案错误'
+        render :forgot2
+      end
     end
+
     def forgot3
 
     end
