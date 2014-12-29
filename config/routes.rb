@@ -20,6 +20,8 @@ Activity::Application.routes.draw do
   post "forgot2" => "login#forgot_pw2"
 
   get "forgot3" => "login#forgot3"
+  post "forgot3" => "login#change_password"
+
 
   get "quit" =>"login#quit"
   get "home_page" =>"login#home_page"

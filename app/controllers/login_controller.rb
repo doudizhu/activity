@@ -56,6 +56,7 @@ class LoginController < ApplicationController
 
   def forgot1
   end
+
   def forgot_pw1
     if params[:user][:name] == ''
       flash.now[:notice] = '帐号不能为空'
@@ -71,14 +72,14 @@ class LoginController < ApplicationController
     end
 
 
-
     def forgot2
       @forgot_pw_question = User.find_by_name(session[:forgot_pw_user_name])[:forgot_pw_question]
 
     end
+
     def forgot_pw2
       @forgot_pw_question = User.find_by_name(session[:forgot_pw_user_name])[:forgot_pw_question]
-      if @forgot_pw_question  == params[:user][:forgot_pw_answer]
+      if @forgot_pw_question == params[:user][:forgot_pw_answer]
         redirect_to :forgot3
       else
         flash.now[:notice]='忘记密码答案错误'
@@ -90,6 +91,26 @@ class LoginController < ApplicationController
 
     end
 
-
+    def change_password
+      user = User.find_by_name(session[:forgot_pw_user_name])
+      if params[:user][:password] == '' || params[:user][:confirmation] == ''
+        flash.now[:notice]='输入不能为空'
+        render :forgot3
+      else
+        #p '.................................'
+        #puts params[:user][:password]
+        #p params[:user][:password_confirmation]
+        if params[:user][:password] != params[:user][:password_confirmation]
+          flash.now[:notice]='两次密码输入不一致'
+          render :forgot3
+        else
+          session[:name]= user.name
+          user.password = params[:user][:password]
+          user.password_confirmation = params[:user][:password_confirmation]
+          user.save
+          redirect_to :welcome1
+        end
+      end
+    end
   end
 end
