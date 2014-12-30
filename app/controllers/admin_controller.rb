@@ -48,4 +48,37 @@ class AdminController < ApplicationController
     users
   end
 
+  def to_user_password
+    session[:change_pw_user_id] = params[:id]
+    redirect_to :change_password
+  end
+
+  def modify_password
+    @change_pw_user_name = User.find_by_id(session[:change_pw_user_id]).name
+
+    #session[:change_pw_user_id]=nil
+  end
+
+  def change_password
+    @change_pw_user_name = User.find_by_id(session[:change_pw_user_id]).name
+    user = User.find_by_id(session[:change_pw_user_id])
+    if params[:user][:password] == '' || params[:user][:confirmation] == ''
+      flash.now[:notice]='输入不能为空'
+      render :modify_password
+    else
+      if params[:user][:password] != params[:user][:password_confirmation]
+        flash.now[:notice]='两次密码输入不一致'
+        render :modify_password
+      else
+        session[:name]= user.name
+        user.password = params[:user][:password]
+        user.password_confirmation = params[:user][:password_confirmation]
+        user.save
+
+        session[:change_pw_user_id]=nil
+        redirect_to :admin
+      end
+    end
+  end
+
 end

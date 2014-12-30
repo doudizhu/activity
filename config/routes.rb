@@ -13,6 +13,9 @@ Activity::Application.routes.draw do
   get "add_user" => "admin#add_user"
   post "add_user" => "admin#create"
   delete "del_user"=> "admin#del_user"
+  get "to_user_password" => "admin#to_user_password"
+  get "change_password" => "admin#modify_password"
+  post "change_password" => "admin#change_password"
 
   get "forgot1" => "login#forgot1"
   get "forgot2" => "login#forgot2"

@@ -41,7 +41,8 @@
           %td
             =link_to "删除",del_user_path(:id => t[:id]), :method => :delete, :confirm=>"您确定要删除\"#{t[:name]}\"？"
             %a
-              修改密码
+            =link_to "修改密码",to_user_password_path(:id => t[:id])
+
 
 
   = will_paginate @pages_user ,:previous_label=>'<<',:next_label=>'>>' ,:style => 'float:right;margin-top:0px;'
