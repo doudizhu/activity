@@ -1,0 +1,234 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/xin.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+</head>
+
+<body>
+<div class="container">
+    <div class="input1-width">
+        <div style="font-size: 1.4em;color: white;margin-bottom: 0.5em;">
+            店铺名称：<span id="shop_title"></span> 联系方式：18675528711
+            <span><a style="color: yellow">帮助：</a></span><span id="user">2</span>
+        </div>
+
+        <form id="form-date" action="http://aifuwu.com/product/check-account.py/do" method="GET">
+            <input name="r" type="text" style="display:none">
+            <!--<input id="input-date" name="date" type="date" tabindex="2" style="border-radius: 0.5em;width: 150px;display:inline;" class="form-control">-->
+            <input id="input-date" name="date" type="date" tabindex="2" style="border-radius: 0.3em;border: 0;">
+            <input id="btn-confirm" name="confirm" type="submit" tabindex="3" value="查询"
+                   class="btn btn-block1 btn-lg btn-warning1" style="margin-left: 5px;padding: 8px 28px 7px 28px;margin-top: -2px;">
+                   <!--style="width:100px; height:40px; border-radius: 0.5em;">-->
+        </form>
+
+        <!--<div><span style="background: white;font-size: 1.3em;padding: 0.2em;">2014-03-07</span>-->
+        <!--<button class="btn btn-warning" style="padding:0 0.3em;font-size: 1.3em">确定</button>-->
+        <!--</div>-->
+        <div style="font-size: 1.3em;background: white;padding: 0.5em;margin-bottom: 1em;margin-top: 0.5em;border-radius: 0.3em;border-radius: 0.3em;">
+            共<span id="piece" class="insert1">0</span>张消费券，总金额：
+            <span id="total" class="insert1">0</span><span class="insert1">元</span></div>
+
+        <div id="result">
+        </div>
+        </div>
+    </div>
+
+<script type="text/javascript">
+    var d1 = new Date();
+    var y1= d1.getFullYear();
+    var m1 = d1.getMonth()+1;
+    if(m1<10)
+        m1="0"+m1;
+    var dt1 = d1.getDate();
+    if(dt1<10)
+        dt1 = "0"+dt1;
+    var d2 = y1+"-"+m1+"-"+dt1;
+    document.getElementById('input-date').value=d2;
+</script>
+        <!--<div>-->
+        <!--<table class="table table1" style="text-align: center;background: white;">-->
+        <!--<tr>-->
+        <!--<td></td>-->
+        <!--<td>使用</td>-->
+        <!--<td></td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+        <!--<td>000000000542</td>-->
+        <!--<td>18575568742</td>-->
+        <!--<td style="color: red;">10元</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+        <!--<td></td>-->
+        <!--<td>2014-03-06 18:49:17</td>-->
+        <!--<td></td>-->
+        <!--</tr>-->
+        <!--</table>-->
+
+        <!--<table class="table table1" style="text-align: center;background: white;">-->
+        <!--<tr>-->
+        <!--<td></td>-->
+        <!--<td>使用</td>-->
+        <!--<td></td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+        <!--<td>000000000542</td>-->
+        <!--<td>18575568742</td>-->
+        <!--<td style="color: red;">10元</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+        <!--<td></td>-->
+        <!--<td>2014-03-06 18:49:17</td>-->
+        <!--<td></td>-->
+        <!--</tr>-->
+        <!--</table>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+
+        <script>
+//            document.getElementById('dateOrder').value = "<?php echo date("Y-m-d"); ?>";
+//            $(document).ready( function() {
+//                var now = new Date();
+//                var today = now.getDate()  + '/' + (now.getMonth() + 1) + '/' + now.getFullYear();
+//                var today = now.getFullYear()  + '-' + (now.getMonth() + 1) + '-' +now.getDate() ;
+//                alert(today);
+////                $('#input-date').val(today);
+//                $('#input-date').value = today;
+//            });
+
+            //产生随机数
+            function getRandom(n) {
+                return Math.floor(Math.random() * n + 1)
+            }
+
+            $(document).ready(function () {
+//  				if (!$.cookie("sessionid"))
+//  				{
+//  					location.href = "shop_login.html";
+//  				}
+                if (!window.localStorage.sessionid) {
+                    location.href = "shop_login.html";
+                }
+
+                $('#shop_title').html(window.localStorage.shop_title);
+            });
+
+            function response(data) {
+                if (data.retcode == 200) {
+                    //成功，显示
+                    var tickets = data.ticket_info;
+
+                    $('#piece').html(tickets.length);
+
+                    var total = 0.0;
+
+                    //alert(tickets.length);
+                    for (i = 0; i < tickets.length; i++) {
+                        $('#result').append(
+                                '<div><table class="table table1" style="text-align: center;background: white;">' +
+                                        '<tr><td></td><td>' + '使用' + '</td><td></td></tr>' +
+                                        '<tr><td>' + tickets[i].code + '</td>' +
+                                        '<td>' + tickets[i].from_owner + '</td>' +
+                                        '<td style="color: red;">' + tickets[i].price + '</td></tr>' +
+                                        '<tr><td></td><td>' + tickets[i].use_time + '</td><td></td></tr>' +
+                                        '</table></div>');
+//                        tickets[i].from_owner + '' + tickets[i].use_time + '</td><td>' + tickets[i].price + '</td></tr></table></div>');
+
+                        total += tickets[i].price;
+                    }
+
+//            $('#total').html(total);
+//            $('#total').html(Math.round(total*1000)/1000);
+                    $('#total').html(changeTwoDecimal_f(total));
+
+                }
+                else {
+                    //失败
+                    alert(data.msg);
+                }
+            }
+
+            var options = {
+                //beforeSubmit: checkLogin,
+                success: response,
+                //url:,
+                type: 'get',
+                dataType: 'jsonp',
+                clearForm: false,
+                timeout: 3000
+            };
+
+            $('#form-date').submit(function () {
+
+                //$(this).ajaxSubmit(options);
+                //window.location.reload();
+                $('#result').empty();
+
+                $.ajax(
+                        {
+                            type: "GET",
+                            url: "http://aifuwu.com/product/check-account.py/do",
+                            dataType: "jsonp",
+                            success: response,
+                            data: {
+                                //sessionid : $.cookie("sessionid"),
+
+                                sessionid: window.localStorage.sessionid,
+                                date:document.getElementById('input-date').value,
+                                r: getRandom(9999)
+                            },
+                            timeout: 3000
+                        });
+
+                return false;
+            });
+
+            function changeTwoDecimal_f(x) {
+                02
+                var f_x = parseFloat(x);
+                03
+                if (isNaN(f_x)) {
+                    04
+                    alert('function:changeTwoDecimal->parameter error');
+                    05
+                    return false;
+                    06
+                }
+                07
+                var f_x = Math.round(x * 100) / 100;
+                08
+                var s_x = f_x.toString();
+                09
+                var pos_decimal = s_x.indexOf('.');
+                10
+                if (pos_decimal < 0) {
+                    11
+                    pos_decimal = s_x.length;
+                    12
+                    s_x += '.';
+                    13
+                }
+                14
+                while (s_x.length <= pos_decimal + 2) {
+                    15
+                    s_x += '0';
+                    16
+                }
+                17
+                return s_x;
+                18
+            }
+
+
+        </script>
+
+</body>
+</html>

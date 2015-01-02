@@ -1,0 +1,19 @@
+%header(id="bid")
+  竞价（{{number}}人）
+  %div(class="header-left" )
+    %a(class="btn btn-primary" ng-tap="back_to_activity_list_page()")
+      返回
+  %div(class="header-right" )
+    %a(class="btn btn-primary" ng-tap="start_bid()" ng-hide="show" ng-disabled="start_able")
+      开始
+  %div(class="header-right" )
+    %a(class="btn btn-primary" ng-tap="over_bid()"  ng-show="show" ng-disabled="over_able" )
+      结束
+
+%div(class="wrapper scrollable")
+  %ul(class="list-style-2" )
+    %li(ng-repeat="list in lists" )
+      %h3
+        {{$index+1}}.{{list.name}}
+      %p
+        ☎: {{list.phone}}

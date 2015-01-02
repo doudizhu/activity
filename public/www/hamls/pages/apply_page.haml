@@ -1,0 +1,32 @@
+%header(id = 'apply_list')
+  报名({{number}}人)
+  %div(class="header-left")
+    %a(class="btn-style btn-4" ng-tap = "back_to_activity_list_page()")
+      返回
+  %div(class="header-right" ng-switch = "status")
+    %div(class="btn btn-primary" ng-tap="start_apply()"  ng-disabled='false' ng-switch-when = 'initial')
+      开始
+    %div(class="btn btn-primary" ng-disabled='true' ng-switch-when = 'initial_start')
+      开始
+    %div(class="btn btn-primary" ng-tap="over_apply()" ng-disabled='false' ng-switch-when = 'start')
+      结束
+    %div(class="btn btn-primary"  ng-disabled='true' ng-switch-when = 'end_apply')
+      结束
+
+%div(class="wrapper scrollable")
+  %ul(class="list-style-2" )
+    %li(ng-repeat="list in lists" )
+      %h3
+        {{list.name}}
+      %p
+        ☎: {{list.phone}}
+
+
+%footer
+  %ul(class="footer-nav footer-nav-2tabs" )
+    %li(class="active")
+      %a(style="font-size:20px")
+        报名
+    %li
+      %a(style="font-size:20px" ng-tap="back_to_bid_list_page()")
+        竞价

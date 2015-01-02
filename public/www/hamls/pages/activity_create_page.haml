@@ -1,0 +1,17 @@
+%header
+  创建活动
+  %div(class="header-left" style="display:{{play}}")
+    %a(class="btn-style btn-4" ng-tap = "back_to_activity_list_page()")
+      返回
+
+.wrapper
+  %div(class="index-action" style="margin-top:90px")
+    %div(class="index-login" )
+      %div(class="input-prepend" )
+        %input(ng-model="name" type="text" style="width:50%" ng-change="judge_repeat()" placeholder="活动名称" )
+      %div(ng-show='show')
+        %p(style="color:red" )
+          活动名称重复!
+  %div(class="index-action" )
+    %div(class="btn btn-primary"  ng-disabled='disabled' style="width:50%" ng-tap = "back_to_apply_page()" )
+      创建

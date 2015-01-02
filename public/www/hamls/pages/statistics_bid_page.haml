@@ -1,0 +1,21 @@
+%header
+  统计 {{bid}}({{number}}人)
+  %div(class="header-left" )
+    %a(class="btn btn-primary" ng-tap="back_to_bid_list()" )
+      返回
+  %div(class="header-right" )
+    %a(class="btn btn-primary" ng-tap="back_to_result_bid()" )
+      列表
+
+%div(class="wrapper scrollable" )
+  %ul(class="list-style-2" )
+    %li.text-left(ng-repeat="list in lists" style="height:40px")
+      %div(style="float:left;width:50%"  )
+        ￥{{list.price}}
+      %div(style="text-align:right;float:left;width:50%"  )
+        {{list.key}}人
+%footer(ng-switch = 'result')
+  %div(style="background-color:lightblue;text-align:center" ng-switch-when = 'succeed' )
+    竞价结果：{{succeed.name + " ￥" + succeed.price + "  ☎" + succeed.phone}}
+  %div(style="background-color:lightblue;text-align:center"  ng-switch-when = 'failed' )
+    竞价结果：竞价失败

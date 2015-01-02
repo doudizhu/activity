@@ -1,0 +1,23 @@
+body{
+    /*background-color: #999999;*/
+}
+
+
+.font1{
+    font-size: 1.2em;
+}
+
+.font-title{
+    font-size: 1.7em;
+    color: white;
+    text-align: center;
+}
+
+.input1-width{
+    width: 100%;
+}
+@media (min-width: 992px){
+    .input1-width{
+        width: 50%;
+    }
+}

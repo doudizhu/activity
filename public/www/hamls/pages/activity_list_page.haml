@@ -1,0 +1,11 @@
+%header
+  活动列表
+  %div(class="header-right")
+    %a(class=" btn btn-primary" ng-tap = "back_to_activity_create_page()"  ng-disabled='creat_able')
+      创建活动
+
+%div(class="wrapper scrollable")
+  %ul(style="margin:0" )
+    %li( class = '{{list.status}} btn' style="width:100% ;background-color:{{color}} " ng-repeat="list in activityList" ng-tap="back_to_activity_sign_up_page(list)" )
+      %h3
+        {{list.name}}

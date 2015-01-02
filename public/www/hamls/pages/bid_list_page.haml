@@ -1,0 +1,24 @@
+%header
+  竞价列表
+  %div(class="header-left")
+    %a(class="btn btn-primary" ng-tap="back_to_activity_list_page()")
+      返回
+  %div(class="header-right")
+    %a(class="btn btn-primary" ng-tap="back_to_bid_list_page()" ng-disabled="start_able")
+      开始
+
+%div(class="wrapper scrollable")
+  %ul(style="margin:0" )
+    %li( class = '{{list.status}} btn' style="width:100%" ng-repeat="list in lists" ng-tap="back_to_item_bid_page(list)")
+      %h3
+        {{list.bid}}
+
+
+%footer
+  %ul(class="footer-nav footer-nav-2tabs" )
+    %li
+      %a(style="font-size:20px" ng-tap="back_to_apply_page()" )
+        报名
+    %li(class="active")
+      %a(style="font-size:20px")
+        竞价

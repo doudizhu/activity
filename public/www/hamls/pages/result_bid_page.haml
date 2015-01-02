@@ -1,0 +1,39 @@
+%header
+  结果 {{bid}}({{number}}人)
+  %div(class="header-left" )
+    %a(class="btn btn-primary" ng-tap="back_to_bid_list()")
+      返回
+  %div(class="header-right" )
+    %a(class="btn btn-primary" ng-tap="back_to_statistics_bid()" )
+      统计
+
+%div(class="wrapper scrollable")
+  %ul(class="list-style-2" )
+    %li(ng-repeat="list in lists" style="height:100px" )
+      %h3
+        {{$index+1}}. {{list.name}}
+      %div(style="text-align:left;float:left;width:50%")
+        ☎{{list.phone}}
+      %div(style="text-align:right;float:left;width:50%")
+        ￥{{list.price}}
+
+%footer
+  %div(ng-show="show" style="background-color:lightblue;text-align:center"  )
+    竞价结果：{{succeed.name}}  ￥{{succeed.price}}  ☎{{succeed.phone}}
+  %div(ng-hide='show' style="background-color:lightblue;text-align:center"  )
+    竞价结果：竞价失败
+
+#myModal.modal.fade
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button(type="button" class="close" data-dismiss="modal" aria-hidden="true") &times;
+        .modal-title.question_size
+      .modal-body
+        %div(style='text-align:center')
+          %div(ng-show="show")
+            %h4 竞价结果：{{succeed.name}} ￥{{succeed.price}}  ☎{{succeed.phone}}
+          %div(ng-hide='show')
+            %h4 竞价结果：竞价失败
+      .modal-footer
+        %button.btn.btn-danger(type='button' data-dismiss='modal') {{'close'}}

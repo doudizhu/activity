@@ -1,6 +1,10 @@
 class LoginController < ApplicationController
+  #skip_before_filter :verify_authenticity_token, :only => [:process_phone_login ]
+  skip_before_filter :verify_authenticity_token, :only => [:process_login]
+
   def login
     #redirect_to 'login/login'
+
   end
 
   def regist
@@ -24,8 +28,18 @@ class LoginController < ApplicationController
 
   def process_login
     @user = User.find_by_name(params[:user][:name])
-
+    #p '.................................'
+    #puts params[:user]
+    #p params[:user][:password_confirmation]
+    #puts "================>" + params[:from];
     if @user && @user.authenticate(params[:user][:password])
+      if params[:from] == 'phone'
+        #puts "------------->" + params[:from]
+        respond_to do |format|
+          format.json {render :json => "success"}
+        end
+        return;
+      end
       if @user.login_type == 'user'
         session[:login_user] = @user.name
         redirect_to :welcome1
@@ -34,6 +48,14 @@ class LoginController < ApplicationController
         redirect_to :admin
       end
     else
+      #puts "-=-=-=-=-=>" + params[:from]
+      if params[:from] == 'phone'
+        #puts "-=-=-=-=-=>" + params[:from]
+        respond_to do |format|
+          format.json {render :json => "none"}
+        end
+        return
+      end
       flash.now[:error] = '用户名不存在或密码错误'
       render :login
     end

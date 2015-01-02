@@ -1,0 +1,14 @@
+.container
+  活动通
+  .row
+    .col-lg-12
+      -#%span 用户名
+      %input.form-control(type="text" ng-model='user.name' placeholder="请输入帐号")
+      %span.error(ng-show='error') 用户名或密码错误
+  .row
+    .col-lg-12
+      -#%span 密码
+      %input.form-control(type="password" ng-model='user.password' placeholder="请输入密码")
+  .row
+    .col-lg-12
+      %button.btn-block.btn.defaultinfo(ng-click="submit()") 登录
