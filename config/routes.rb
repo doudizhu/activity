@@ -9,6 +9,9 @@ Activity::Application.routes.draw do
   post "/regist" => "login#create"
   post "/process_login" => "login#process_login"
 
+  get "phone_login" =>'phone#phone_login'
+  post "phone_login" =>'phone#create_activity'
+
   get "admin" => "admin#manager_index"
   get "add_user" => "admin#add_user"
   post "add_user" => "admin#create"
@@ -24,6 +27,7 @@ Activity::Application.routes.draw do
 
   get "forgot3" => "login#forgot3"
   post "forgot3" => "login#change_password"
+
 
 
   get "quit" =>"login#quit"

@@ -20,7 +20,7 @@ myModule.config(function ($routeProvider) {
         }).when("/statistics_bid", {
             templateUrl: "pages/statistics_bid_page.html",
             controller: StatisticsBidController
-        }).when("/phone_login", {
+        }).when("/phone", {
             templateUrl: "pages/phone_login_page.html",
             controller: PhoneController
         }).otherwise({

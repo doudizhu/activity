@@ -1,0 +1,43 @@
+.title1
+  %span(style="font-size:40px;" )
+    活动通
+  %span(style="position:absolute;right:60px;" )
+    你好
+    =@user
+    %a
+      =link_to '退出',{:controller => 'login',:action => 'quit'}
+
+  -#%table.table.table-striped
+  %table.table(style="border:solid 1px lightgrey" )
+
+    %thead
+      %tr.table-header
+        %td(colspan = '4')
+          %span(style="font-size:18px;" )
+            用户管理&nbsp;&nbsp;
+          %button(style="float:right" )
+            -#=link_to '+添加用户',add_user_path,:class => 'btn btn-default'
+            =link_to '同步展示',add_user_path,:style => 'color:black'
+          -#%button
+          -#  +添加用户
+      %tr
+        %th(style="text-align:center") 编号
+        %th(style="text-align:center") 活动名称
+        %th(style="text-align:center") 报名人数
+        %th(style="text-align:center") 竞价次数
+
+    -#%tbody(style="text-align:center;")
+    -#  -@pages_user.each do |t|
+    -#    %tr
+    -#      %td
+    -#        =t[:index]
+    -#      %td
+    -#        =t[:name]
+    -#      %td
+    -#        =link_to "删除",del_user_path(:id => t[:id]), :method => :delete, :confirm=>"您确定要删除\"#{t[:name]}\"？"
+    -#        %a
+    -#        =link_to "修改密码",to_user_password_path(:id => t[:id])
+
+
+
+  -#= will_paginate @pages_user ,:previous_label=>'<<',:next_label=>'>>' ,:style => 'float:right;margin-top:0px;'

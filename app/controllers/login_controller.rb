@@ -34,9 +34,10 @@ class LoginController < ApplicationController
     #puts "================>" + params[:from];
     if @user && @user.authenticate(params[:user][:password])
       if params[:from] == 'phone'
+        session[:login_user] = @user.name
         #puts "------------->" + params[:from]
         respond_to do |format|
-          format.json {render :json => "success"}
+          format.json { render :json => "success" }
         end
         return;
       end
@@ -52,7 +53,7 @@ class LoginController < ApplicationController
       if params[:from] == 'phone'
         #puts "-=-=-=-=-=>" + params[:from]
         respond_to do |format|
-          format.json {render :json => "none"}
+          format.json { render :json => "none" }
         end
         return
       end

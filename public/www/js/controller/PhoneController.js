@@ -6,7 +6,7 @@ function PhoneController($scope, $http, $navigate) {
             url:'/process_login' ,
             data: {user:$scope.user,from:'phone'}
         }).success(function(data){
-                console.log(data)  ;
+//                console.log(data)  ;
                 if(data == 'none') return $scope.error = true;
                 $navigate.go('/');
             })
